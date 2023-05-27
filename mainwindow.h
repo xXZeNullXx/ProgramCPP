@@ -17,5 +17,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    void handleButtonClick();
+
 };
 #endif // MAINWINDOW_H
