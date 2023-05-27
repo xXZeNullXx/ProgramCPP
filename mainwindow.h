@@ -17,7 +17,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    void handleButtonClick();
+    void SevenZipClick();
+    void BraveClick();
+    void VSCodeClick();
+    void DiscordClick();
 
 };
 #endif // MAINWINDOW_H

@@ -6,6 +6,7 @@
 #include <QPushButton>
 
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -31,18 +32,26 @@ MainWindow::MainWindow(QWidget *parent)
     tabWidget->addTab(new QWidget(), "Chatting");
     tabWidget->addTab(new QWidget(), "Util");
 
-    // Access the content widget of the first tab
-    QWidget* firstTabWidget = tabWidget->widget(0);
+    // Access the content widget
+    QWidget* Gaiming = tabWidget->widget(0);
+    QWidget* Coding = tabWidget->widget(1);
+    QWidget* Browser = tabWidget->widget(2);
+    QWidget* Chatting = tabWidget->widget(3);
+    QWidget* Util = tabWidget->widget(4);
 
     // Create the button
-    QPushButton *button = new QPushButton("Button", firstTabWidget);
+    QPushButton *sevenzip = new QPushButton("7Zip", Util);
+    QPushButton *brave = new QPushButton("Brave", Browser);
 
-    // Add the button to the layout of the first tab's content widget
-    QVBoxLayout *firstTabLayout = new QVBoxLayout(firstTabWidget);
-    firstTabLayout->addWidget(button);
+    // Add the button to the layout
+    QVBoxLayout *UtilLayout = new QVBoxLayout(Util);
+    QVBoxLayout *BrowserLayout = new QVBoxLayout(Browser);
+    UtilLayout->addWidget(sevenzip);
+    BrowserLayout->addWidget(brave);
 
     // Connect the button's clicked signal to the handleButtonClick slot
-    connect(button, &QPushButton::clicked, this, &MainWindow::handleButtonClick);
+    connect(sevenzip, &QPushButton::clicked, this, &MainWindow::SevenZipClick);
+    connect(brave, &QPushButton::clicked, this, &MainWindow::BraveClick);
 
     // Set additional properties
     tabWidget->setTabPosition(QTabWidget::North);
@@ -53,8 +62,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::handleButtonClick()
+void MainWindow::SevenZipClick()
 {
-    // Implementation of the function
-    qDebug() << "Button clicked!";
+    std::system("winget install 7zip.7zip");
 }
+
+void MainWindow::BraveClick()
+{
+    std::system("winget install Brave.Brave");
+}
+
