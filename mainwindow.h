@@ -32,6 +32,25 @@ private:
     void FlowLauncherClick();
     void EpicGamesClick();
     void PowerToysClick();
+    void EADesktopClick();
+    void GOGGalaxyClick();
+    void TeamsClick();
+    void GimpClick();
+    void BitwardenClick();
+    void NotepadPPClick();
+    void IrfanViewClick();
+    void HWiNFOClick();
+    void OnlyOfficeClick();
+    void NilesoftShellClick();
+    void VLCClick();
+    void RufusClick();
+    void EspansoClick();
+    void SnaketailClick();
+    void EverythingClick();
+    void RainmeterClick();
+    void GreenshotClick();
+    void fluxClick();
+    void SteamClick();
 
 };
 #endif // MAINWINDOW_H

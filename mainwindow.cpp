@@ -55,6 +55,25 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *FlowLauncher = new QPushButton("FlowLauncher", Util);
     QPushButton *EpicGames = new QPushButton("EpicGames", Gaiming);
     QPushButton *PowerToys = new QPushButton("PowerToys", Util);
+    QPushButton *EADesktop = new QPushButton("EA Desktop", Gaiming);
+    QPushButton *GOGGalaxy = new QPushButton("GOG Galaxy", Gaiming);
+    QPushButton *Teams = new QPushButton("Teams", Chatting);
+    QPushButton *Gimp = new QPushButton("Gimp", Util);
+    QPushButton *Bitwarden = new QPushButton("Bitwarden", Util);
+    QPushButton *NotepadPP = new QPushButton("Notepad++", Util);
+    QPushButton *IrfanView = new QPushButton("IrfanView", Util);
+    QPushButton *HWiNFO = new QPushButton("HWiNFO", Util);
+    QPushButton *OnlyOffice = new QPushButton("OnlyOffice", Util);
+    QPushButton *NilesoftShell = new QPushButton("Nilesoft Shell", Util);
+    QPushButton *VLC = new QPushButton("VLC", Util);
+    QPushButton *Rufus = new QPushButton("Rufus", Util);
+    QPushButton *Espanso = new QPushButton("Espanso", Util);
+    QPushButton *Snaketail = new QPushButton("Snaketail", Util);
+    QPushButton *Everything = new QPushButton("Everything", Util);
+    QPushButton *Rainmeter = new QPushButton("Rainmeter", Util);
+    QPushButton *Greenshot = new QPushButton("Greenshot", Util);
+    QPushButton *flux = new QPushButton("flux", Util);
+    QPushButton *Steam = new QPushButton("Steam", Gaiming);
 
     // Add the button to the layout
     QVBoxLayout *UtilLayout = new QVBoxLayout(Util);
@@ -77,6 +96,25 @@ MainWindow::MainWindow(QWidget *parent)
     UtilLayout->addWidget(FlowLauncher);
     GaimingLayout->addWidget(EpicGames);
     UtilLayout->addWidget(PowerToys);
+    GaimingLayout->addWidget(EADesktop);
+    GaimingLayout->addWidget(GOGGalaxy);
+    ChattingLayout->addWidget(Teams);
+    UtilLayout->addWidget(Gimp);
+    UtilLayout->addWidget(Bitwarden);
+    UtilLayout->addWidget(NotepadPP);
+    UtilLayout->addWidget(IrfanView);
+    UtilLayout->addWidget(HWiNFO);
+    UtilLayout->addWidget(OnlyOffice);
+    UtilLayout->addWidget(NilesoftShell);
+    UtilLayout->addWidget(VLC);
+    UtilLayout->addWidget(Rufus);
+    UtilLayout->addWidget(Espanso);
+    UtilLayout->addWidget(Snaketail);
+    UtilLayout->addWidget(Everything);
+    UtilLayout->addWidget(Rainmeter);
+    UtilLayout->addWidget(Greenshot);
+    UtilLayout->addWidget(flux);
+    GaimingLayout->addWidget(Steam);
 
     // Connect the button's clicked signal to the handleButtonClick slot
     connect(sevenzip, &QPushButton::clicked, this, &MainWindow::SevenZipClick);
@@ -94,6 +132,25 @@ MainWindow::MainWindow(QWidget *parent)
     connect(FlowLauncher, &QPushButton::clicked, this, &MainWindow::FlowLauncherClick);
     connect(EpicGames, &QPushButton::clicked, this, &MainWindow::EpicGamesClick);
     connect(PowerToys, &QPushButton::clicked, this, &MainWindow::PowerToysClick);
+    connect(EADesktop, &QPushButton::clicked, this, &MainWindow::EADesktopClick);
+    connect(GOGGalaxy, &QPushButton::clicked, this, &MainWindow::GOGGalaxyClick);
+    connect(Teams, &QPushButton::clicked, this, &MainWindow::TeamsClick);
+    connect(Gimp, &QPushButton::clicked, this, &MainWindow::GimpClick);
+    connect(Bitwarden, &QPushButton::clicked, this, &MainWindow::BitwardenClick);
+    connect(NotepadPP, &QPushButton::clicked, this, &MainWindow::NotepadPPClick);
+    connect(IrfanView, &QPushButton::clicked, this, &MainWindow::IrfanViewClick);
+    connect(HWiNFO, &QPushButton::clicked, this, &MainWindow::HWiNFOClick);
+    connect(OnlyOffice, &QPushButton::clicked, this, &MainWindow::OnlyOfficeClick);
+    connect(NilesoftShell, &QPushButton::clicked, this, &MainWindow::NilesoftShellClick);
+    connect(VLC, &QPushButton::clicked, this, &MainWindow::VLCClick);
+    connect(Rufus, &QPushButton::clicked, this, &MainWindow::RufusClick);
+    connect(Espanso, &QPushButton::clicked, this, &MainWindow::EspansoClick);
+    connect(Snaketail, &QPushButton::clicked, this, &MainWindow::SnaketailClick);
+    connect(Everything, &QPushButton::clicked, this, &MainWindow::EverythingClick);
+    connect(Rainmeter, &QPushButton::clicked, this, &MainWindow::RainmeterClick);
+    connect(Greenshot, &QPushButton::clicked, this, &MainWindow::GreenshotClick);
+    connect(flux, &QPushButton::clicked, this, &MainWindow::fluxClick);
+    connect(Steam, &QPushButton::clicked, this, &MainWindow::SteamClick);
 
     // Set additional properties
     tabWidget->setTabPosition(QTabWidget::North);
@@ -177,4 +234,99 @@ void MainWindow::EpicGamesClick()
 void MainWindow::PowerToysClick()
 {
     std::system("winget install Microsoft.PowerToys");
+}
+
+void MainWindow::EADesktopClick()
+{
+    std::system("winget install ElectronicArts.EADesktop");
+}
+
+void MainWindow::GOGGalaxyClick()
+{
+    std::system("winget install GOG.Galaxy");
+}
+
+void MainWindow::TeamsClick()
+{
+    std::system("winget install Microsoft.Teams");
+}
+
+void MainWindow::GimpClick()
+{
+    std::system("winget install GIMP.GIMP");
+}
+
+void MainWindow::BitwardenClick()
+{
+    std::system("winget install Bitwarden.Bitwarden");
+}
+
+void MainWindow::NotepadPPClick()
+{
+    std::system("winget install Notepad++.Notepad++");
+}
+
+void MainWindow::IrfanViewClick()
+{
+    std::system("winget install IrfanSkiljan.IrfanView");
+}
+
+void MainWindow::HWiNFOClick()
+{
+    std::system("winget install REALiX.HWiNFO");
+}
+
+void MainWindow::OnlyOfficeClick()
+{
+    std::system("winget install ONLYOFFICE.DesktopEditors");
+}
+
+void MainWindow::NilesoftShellClick()
+{
+    std::system("winget install Nilesoft.Shell");
+}
+
+void MainWindow::VLCClick()
+{
+    std::system("winget install VideoLAN.VLC");
+}
+
+void MainWindow::RufusClick()
+{
+    std::system("winget install Rufus.Rufus");
+}
+
+void MainWindow::EspansoClick()
+{
+    std::system("winget install Espanso.Espanso");
+}
+
+void MainWindow::SnaketailClick()
+{
+    std::system("winget install snakefoot.snaketail");
+}
+
+void MainWindow::EverythingClick()
+{
+    std::system("winget install voidtools.Everything");
+}
+
+void MainWindow::RainmeterClick()
+{
+    std::system("winget install Rainmeter.Rainmeter");
+}
+
+void MainWindow::GreenshotClick()
+{
+    std::system("winget install Greenshot.Greenshot");
+}
+
+void MainWindow::fluxClick()
+{
+    std::system("winget install flux.flux");
+}
+
+void MainWindow::SteamClick()
+{
+    std::system("winget install Valve.Steam");
 }
